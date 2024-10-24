@@ -301,7 +301,7 @@ echo:             [3] SFC Scannow
 echo:                                                                      
 echo:             [4] Fix WMI
 echo:             [5] Fix Licensing
-echo:             [6] Fix WPA Registry
+echo:            
 echo:             ___________________________________________________
 echo:
 echo:             [0] %_exitmsg%
@@ -312,7 +312,7 @@ choice /C:1234560 /N
 set _erl=%errorlevel%
 
 if %_erl%==7 exit /b
-if %_erl%==6 start %mas%fix-wpa-registry &goto at_menu
+if %_erl%==66 start %mas%fix-wpa-registry &goto at_menu
 if %_erl%==5 goto:retokens
 if %_erl%==4 goto:fixwmi
 if %_erl%==3 goto:sfcscan
